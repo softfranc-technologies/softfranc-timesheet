@@ -1,0 +1,120 @@
+.root {
+  max-width: 960px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  animation: fadeIn 0.35s ease;
+}
+
+.pageHeader { margin-bottom: 4px; }
+.pageTitle { font-size: 1.6rem; font-weight: 800; color: var(--text); margin-bottom: 4px; }
+.pageSub { font-size: 0.875rem; color: var(--text-muted); }
+
+.grid {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.avatarCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 32px 20px;
+  gap: 8px;
+}
+
+.avatar {
+  width: 72px; height: 72px;
+  border-radius: 50%;
+  background: var(--accent-dim);
+  border: 3px solid var(--accent);
+  color: var(--accent);
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.avatarName { font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; color: var(--text); }
+.avatarEmail { font-size: 0.8rem; color: var(--text-muted); word-break: break-all; }
+
+.avatarBadge {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 4px 12px;
+  background: var(--accent-dim);
+  color: var(--accent);
+  border-radius: 99px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid var(--accent);
+}
+
+.avatarDept {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.forms { display: flex; flex-direction: column; gap: 20px; }
+
+.cardHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.cardIconWrap {
+  width: 40px; height: 40px;
+  background: var(--accent-dim);
+  border: 1px solid var(--accent);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.cardIconWarning {
+  background: var(--warning-dim);
+  border-color: var(--warning);
+  color: var(--warning);
+}
+
+.cardTitle { font-size: 1rem; font-weight: 700; color: var(--text); margin-bottom: 2px; }
+.cardSub { font-size: 0.8rem; color: var(--text-muted); }
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.formStack {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.formActions {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+@media (max-width: 768px) {
+  .grid { grid-template-columns: 1fr; }
+  .avatarCard { flex-direction: row; text-align: left; padding: 20px; }
+  .avatar { margin-bottom: 0; flex-shrink: 0; }
+  .formGrid { grid-template-columns: 1fr; }
+}
